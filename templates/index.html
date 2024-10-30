@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NDVI & NDWI Web App</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="https://js.arcgis.com/4.20/"></script>
+</head>
+<body>
+    <h1>NDVI and NDWI Mapping Tool</h1>
+    <div id="mapDiv"></div>
+
+    <form id="controls">
+        Start Date: <input type="date" id="startDate" required><br>
+        End Date: <input type="date" id="endDate" required><br>
+        Cloud Cover (%): <input type="number" id="cloudCover" min="0" max="100" value="10"><br>
+        Latitude/Longitude Bounds:
+        <input type="number" id="minLat" placeholder="Min Latitude">
+        <input type="number" id="maxLat" placeholder="Max Latitude">
+        <input type="number" id="minLon" placeholder="Min Longitude">
+        <input type="number" id="maxLon" placeholder="Max Longitude"><br>
+        <button type="button" onclick="calculateIndices()">Generate Map</button>
+    </form>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
+
